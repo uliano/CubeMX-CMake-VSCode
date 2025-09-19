@@ -1,0 +1,12 @@
+{
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "clangd.arguments": [
+    "-log=verbose",  // RIMUOVI questo in produzione - è per debug
+    "-pretty",
+    "--background-index",
+    "--compile-commands-dir=${workspaceFolder}",
+    "--completion-style=detailed"  // Aggiungi per completion migliori
+  ],
+  "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+  "C_Cpp.intelliSenseEngine": "disabled"  // IMPORTANTE: evita conflitti clangd vs C_Cpp
+}
