@@ -136,6 +136,28 @@ cmake --build build/Debug
 # Use "ST-Link Run" configuration
 ```
 
+## Development Workflow
+
+### Quick Shortcuts (Recommended)
+
+The template includes pre-configured keyboard shortcuts for faster development:
+
+- **Ctrl+Shift+B** - Build project
+- **Ctrl+Shift+F** - Flash firmware to device
+- **Ctrl+Shift+C** - Clean build
+
+### Alternative: Tasks Menu
+
+You can also access these functions via:
+- **Ctrl+Shift+P** → "Tasks: Run Task"
+- Or Terminal menu → "Run Task..."
+
+Available tasks:
+- Build Project
+- Clean Project
+- Flash Firmware
+- Reset Device
+
 ## User Code Organization
 
 ### Application/

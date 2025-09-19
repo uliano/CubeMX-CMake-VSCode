@@ -1,0 +1,15 @@
+[
+    {
+        "key": "ctrl+shift+b",
+        "command": "cmake.build"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.action.tasks.runTask",
+        "args": "flash"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "cmake.clean"
+    }
+]
