@@ -142,9 +142,9 @@ cmake --build build/Debug
 
 The template includes pre-configured keyboard shortcuts for faster development:
 
-- **Ctrl+Shift+B** - Build project
-- **Ctrl+Shift+F** - Flash firmware to device
-- **Ctrl+Shift+C** - Clean build
+- **Alt+B** - Build project
+- **Alt+L** - Flash firmware to device
+- **Alt+X** - Clean build
 
 ### Alternative: Tasks Menu
 

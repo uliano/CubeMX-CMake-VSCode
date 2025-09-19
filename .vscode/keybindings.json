@@ -1,15 +1,15 @@
 [
     {
-        "key": "ctrl+shift+b",
+        "key": "alt+b",
         "command": "cmake.build"
     },
     {
-        "key": "ctrl+shift+f",
+        "key": "alt+l",
         "command": "workbench.action.tasks.runTask",
-        "args": "flash"
+        "args": "Flash Firmware"
     },
     {
-        "key": "ctrl+shift+c",
+        "key": "alt+x",
         "command": "cmake.clean"
     }
 ]
