@@ -2,8 +2,16 @@ set(CMAKE_SYSTEM_NAME               Generic)
 set(CMAKE_SYSTEM_PROCESSOR          arm)
 
 # Some default GCC settings
-# arm-none-eabi- must be part of path environment
-set(TOOLCHAIN_PREFIX                arm-none-eabi-)
+# Use configurable toolchain path instead of relying on PATH environment
+if(DEFINED ENV{ARM_TOOLCHAIN_PATH})
+    set(ARM_TOOLCHAIN_PATH $ENV{ARM_TOOLCHAIN_PATH})
+elseif(DEFINED ARM_TOOLCHAIN_PATH)
+    # Already set as cache variable or normal variable
+else()
+    message(FATAL_ERROR "ARM_TOOLCHAIN_PATH must be defined. Set it in CMakePresets.json environment section or pass it to cmake with -DARM_TOOLCHAIN_PATH=/path/to/toolchain/bin")
+endif()
+
+set(TOOLCHAIN_PREFIX                ${ARM_TOOLCHAIN_PATH}/arm-none-eabi-)
 
 # Define compiler settings
 set(CMAKE_C_COMPILER                ${TOOLCHAIN_PREFIX}gcc)

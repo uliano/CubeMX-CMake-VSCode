@@ -16,6 +16,9 @@
                 "CMAKE_CXX_STANDARD_REQUIRED": "ON",
                 "CMAKE_CXX_EXTENSIONS": "ON",
                 "PROJECT_NAME": "MyApp"
+            },
+            "environment": {
+                "ARM_TOOLCHAIN_PATH": "/opt/gcc-arm-none-eabi/bin"
             }
         },
         {

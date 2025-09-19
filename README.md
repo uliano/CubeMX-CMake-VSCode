@@ -22,7 +22,22 @@ A clean, maintainable STM32 development setup using CMake, VS Code, and CubeMX w
 
 ## Initial Setup
 
-### 1. Create CubeMX Project
+### 1. Configure ARM Toolchain Path
+
+Set the path to your ARM GCC toolchain in `CMakePresets.json`. Edit the `environment` section in the default preset:
+
+```json
+"environment": {
+    "ARM_TOOLCHAIN_PATH": "/opt/gcc-arm-none-eabi/bin"
+}
+```
+
+Update the path to match your toolchain installation location. Common locations:
+- **Linux**: `/opt/gcc-arm-none-eabi/bin`
+- **macOS**: `/usr/local/bin` or `/opt/homebrew/bin`
+- **Windows**: `C:/Program Files (x86)/GNU Arm Embedded Toolchain/*/bin`
+
+### 2. Create CubeMX Project
 
 1. **Clean the CubeMX directory** when changing microcontroller
 2. Open STM32CubeMX and create new project in `CubeMX/` folder
@@ -209,7 +224,9 @@ CompileFlags:
 
 ## Dependencies
 
-- ARM GCC toolchain (`gcc-arm-none-eabi`)
-- CMake 3.22+
-- VS Code with recommended extensions
-- ST-Link tools (`stlink-tools`)
+- **ARM GCC toolchain** (`gcc-arm-none-eabi`) - Configure path in `CMakePresets.json`
+- **CMake** 3.22+
+- **VS Code** with recommended extensions
+- **ST-Link tools** (`stlink-tools`)
+
+**Note**: The ARM toolchain does not need to be in your system PATH - it's configured centrally in the CMake presets.
