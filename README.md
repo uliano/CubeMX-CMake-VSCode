@@ -138,17 +138,9 @@ cmake --build build/Debug
 
 ## Development Workflow
 
-### Quick Shortcuts (Recommended)
+### Tasks Menu
 
-The template includes pre-configured keyboard shortcuts for faster development:
-
-- **Alt+B** - Build project
-- **Alt+L** - Flash firmware to device
-- **Alt+X** - Clean build
-
-### Alternative: Tasks Menu
-
-You can also access these functions via:
+You can access build functions via:
 - **Ctrl+Shift+P** → "Tasks: Run Task"
 - Or Terminal menu → "Run Task..."
 
