@@ -57,7 +57,41 @@ app_main();
    - **ST Official**: Search "STM32XXXX SVD" on ST website
 2. Place it in the project root with a descriptive name (e.g., `STM32G071.svd`)
 
-### 4. Update VS Code Configuration
+### 4. Disconnect from Template Repository
+
+Remove the connection to the template repository:
+
+```bash
+git remote remove origin
+```
+
+**Optional**: Create and connect to a new GitHub repository for your project:
+
+```bash
+# Create new repository on GitHub
+gh repo create my-project-name --private
+
+# Connect to the new repository (choose one):
+# HTTPS (requires token authentication on each push)
+git remote add origin https://github.com/yourusername/my-project-name.git
+
+# SSH (requires initial setup, then no authentication needed)
+git remote add origin git@github.com:yourusername/my-project-name.git
+```
+
+### 5. Enable Tracking of Generated Files
+
+For your project development, modify `.gitignore` to track CubeMX generated files and SVD files by commenting out or removing these lines:
+
+```gitignore
+# CubeMX/*
+# !CubeMX/*.ioc
+# *.svd
+```
+
+This ensures all necessary files are versioned in your project repository.
+
+### 6. Update VS Code Configuration
 
 Edit `.vscode/launch.json`:
 

@@ -9,6 +9,9 @@ docs/
 CubeMX/*
 !CubeMX/*.ioc
 
+# SVD files (microcontroller-specific)
+*.svd
+
 # OS files
 .DS_Store
 Thumbs.db
